@@ -2257,7 +2257,7 @@ input, select, textarea {
 /* Highlights */
 
 	#highlights .highlight {
-		text-align: center;
+		text-align: left;
 	}
 
 		#highlights .highlight h3 {
@@ -3051,3 +3051,128 @@ input, select, textarea {
     font-size: 0.9rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* slideshow */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  
+  #window {
+	font-family: Arial, sans-serif;
+	background: #111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+
+  .slider {
+	position: relative;
+	overflow: hidden;
+	border-radius: 15px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.5);
+	display: inline-block; /* important to shrink-wrap */
+  }
+  
+  .slides {
+	display: flex;
+	transition: transform 0.6s ease;
+  }
+  
+  .slide {
+	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .slide img {
+	display: block;
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
+  }
+  
+  /* Navigation logic */
+  input[name="slider"] {
+	display: none;
+  }
+  
+  #slide1:checked ~ .slides {
+	transform: translateX(0%);
+  }
+  #slide2:checked ~ .slides {
+	transform: translateX(-100%);
+  }
+  #slide3:checked ~ .slides {
+	transform: translateX(-200%);
+  }
+  #slide4:checked ~ .slides {
+	transform: translateX(-300%);
+  }
+  #slide5:checked ~ .slides {
+	transform: translateX(-400%);
+  }
+  
+  /* Dots */
+  .navigation {
+	position: absolute;
+	bottom: 15px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+  }
+  
+  .navigation label {
+	width: 16px;
+	height: 16px;
+	background: black;
+	border-radius: 50%;
+	cursor: pointer;
+	opacity: 0.5;
+	transition: 0.3s;
+  }
+  
+  #slide1:checked ~ .navigation label[for="slide1"],
+  #slide2:checked ~ .navigation label[for="slide2"],
+  #slide3:checked ~ .navigation label[for="slide3"],
+  #slide4:checked ~ .navigation label[for="slide4"],
+  #slide5:checked ~ .navigation label[for="slide5"] {
+	opacity: 1;
+	background: #ff4081;
+  }
+  
