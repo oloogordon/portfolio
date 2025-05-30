@@ -52,9 +52,114 @@
 
 			<!-- Main -->
 
-
 			<section id="main" class="wrapper style2">
 				<div class="title">Features & Skills</div>
+				<div class="container">
+					
+
+															<!-- Video Dropdown -->
+															<div class="dropdown-container">
+																<input type="checkbox" id="toggle-video" class="dropdown-checkbox">
+																<label for="toggle-video" class="dropdown-label">Sample Illustrative Tech support "How-To" video</label>
+																<div class="dropdown-content">
+																<video controls>
+																	<source src="videos/1.mp4" type="video/mp4">
+																	Your browser does not support the video tag.
+																</video>
+																</div>
+															</div>
+
+															<!-- Article 1 Dropdown -->
+															<div class="dropdown-container">
+																<input type="checkbox" id="toggle-article1" class="dropdown-checkbox">
+																<label for="toggle-article1" class="dropdown-label">Demo article: (Tech support) Recovering windows account(Locked out)</label>
+																<div class="dropdown-content">
+																<article>
+																	<h2>How to Recover a Windows Account When Locked Out or Forgotten Password (Windows 10)</h2>
+																	<br>
+																	<p>How to Recover a Windows Account When Locked Out or Forgotten Password (Windows 10)
+																		If you're locked out of your Windows 10 account or have forgotten your password, this article walks you through one of many methods to Recover your account. Since This is an example Video, and in an attempt to keep it short. It is assumed the User has knowledge on how to download Rufus and a windows ISO image. These softwares could have been prepared earlier in time as a precautionary measure or by use of a different computer after being locked out of the computer in question.</p>
+																	<p>	1. What you’ll need:
+																			•  USB Drive 8 GB recommended
+																			• Windows ISO image: https://www.microsoft.com/en-us/software-download/windows10ISO
+																			• Rufus: https://rufus.ie/en/</p>
+																	<p>	2. **Download and install Rufus:**
+																			•  The are various options in the market like Rufus, Unetbootin or Windows Media Creation Tool which allow you to create an installation media for operating systems like windows or Linux, this article will be walking through the recovery steps using Rufus. </p>
+																	<p>	3. Create windows ISO image
+																			•  Assuming Rufus icon was created at the time of installation, Double click(or right click on the icon >> then at the drop down menu click “Run/Open” depending on the version) This will Launch Rufus
+																			• Insert your USB drive (assuming it’s already formatted). On the Rufus window, at the top section under “Device” click on the drop down to select a media(in this case your inserted usb drive) assuming “USB E:” 
+																			• Beneath the “Device” drop down, you sould see “Boot Selection” with a drop down beneath “Disk or ISO Image (please select)” and on the right “Select”. Click on “select”. This will open “file explorer” which you’ll use to navigate to the location where the windows ISO image is stored. Once found click on the ISO windows file and at the bottom of the file explorer left click “open”
+																			• Under partition scheme still on the Rufus window select “GPT” then click “start”</p>
+																	<p>	3. Boot from the USB drive:
+																			• This article will assume you know how to boot from usb or how to change BIOS settings.
+																			• Once restarted the “Windows Setup” window will appear
+																			• Hold “shift” + “F10”
+																			• Command Prompt will open with administrative priviledges
+																			• type “regedit”
+																			• “registry editor” will open. >> select “HKEY(LOCAL MACHINE)”
+																			• Select “File” from the top tab of the registry editor then in the drop down select “Load Hive”
+																			•  Load hive window will open >> select “This PC” >> then select “windows” >> select “system 32” >> select “osk” right click >> select “rename” add “0(zero)” >> “osk0” enter >> go back to system 32 >> “cmd” rename to >> “osk”. Close all windows and return to “windows setup” and cancel the setup window and restart your computer and remove the USB drive</p>
+																	<p>	4. 
+																			•   Once restart is complete and you’re at the login screen
+																			• click beneath at “Ease of access” and select “osk” once clicked, command prompt system 32 window will launch.
+																			• Type “netplwiz” and  “user accounts will launch listing all account users”
+																			• select the appropriate account and click on reset password
+																			• type and confirm password then click “ok”
+																			• return to login page and select the New password
+																			• By now you should be signed into your account</p>
+																	<p>	5.
+																		- Hold “shift + restart button” >> Advanced setup >> Thia final process is to reverse the changes that were earlier made in the system 32 folder</p>
+
+																	
+																</article>
+																</div>
+															</div>
+
+															
+					<!-- <div class="slideshow-container">
+						<div class="slideshow-track">
+						  <img src="images/logo/1.png" alt="Slide 1">
+						  <img src="images/logo/2.png" alt="Slide 2">
+						  <img src="images/logo/3.png" alt="Slide 3">
+						  <img src="images/logo/4.png" alt="Slide 4">
+						  <img src="images/logo/5.png" alt="Slide 5">
+						</div>
+					  </div> -->
+
+															<!-- Article 2 Dropdown -->
+
+
+															<!-- <div class="dropdown-container">
+																<input type="checkbox" id="toggle-article2" class="dropdown-checkbox">
+																<label for="toggle-article2" class="dropdown-label">Example Tech/user Support Article 2 (Downloadable pdf)</label>
+																<div class="dropdown-content">
+																<article>
+																	<h2>Article 2: Understanding the :checked Selector</h2>
+																	<p>DIY user support example artcle coming soon</p>
+																</article>
+																</div>
+															</div> -->
+
+															<!-- Article 3 Dropdown -->
+
+<!-- 															
+															<div class="dropdown-container">
+																<input type="checkbox" id="toggle-article3" class="dropdown-checkbox">
+																<label for="toggle-article3" class="dropdown-label">Example Tech/user Support Article 3 (Downloadable pdf)</label>
+																<div class="dropdown-content">
+																<article>
+																	<h2>Article 3: Understanding the :checked Selector</h2>
+																	<p>DIY article coming soon</p>
+																</article>
+																</div>
+															</div>
+															 -->
+				
+				</div>
+			</section>
+
+			<section id="main" class="wrapper style2">
+				<!-- <div class="title">Features & Skills</div> -->
 				<div class="container">
 
 					<!-- Image -->
@@ -63,8 +168,8 @@
 						</a> -->
 
 					<!-- Features -->
-						<section id="features">
-							<header class="style1">
+						<!-- <section id="features">
+							<header class="style1"> -->
 							<!--	<h2>Skills</h2> -->
 								<!-- <p>Feugiat dolor nullam orci pretium phasellus justo</p> -->
 							</header>
@@ -243,6 +348,7 @@
 						</section>
 
 				</div>
+			</section>
 		
 
 	
